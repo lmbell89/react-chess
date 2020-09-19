@@ -1,0 +1,22 @@
+.notationContainer {
+    height: 70vh;
+    overflow-y: scroll;
+    margin-top: 1rem;
+}
+
+.notationGroup {
+    white-space: nowrap;
+    text-align: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.notationLabel {
+    width: 10%;
+    display: inline-block;
+}
+
+.notationButton {
+    margin-left: 1rem;
+    width: 40%;
+}

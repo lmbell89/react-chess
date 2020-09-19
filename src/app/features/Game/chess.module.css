@@ -1,0 +1,102 @@
+.board {
+    display: grid;
+    border: 3px solid black;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    max-width: 80vh;
+    margin-bottom: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.square {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.darkSquare {
+    background: #55f;
+    background: #670;
+    background: #843;
+}
+
+.lightSquare {
+    background: #9af;
+    background: #9a6;
+    background: #a96;
+}
+
+.selectedSquare, .legalMove {
+    background: #4bf;
+}
+
+.lastMove {
+    background: #f0f;
+}
+
+.blackPiece, .whitePiece {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: 15%;
+    font-size: min(7.2vh, 3.5rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blackPiece {
+    color: #000
+}
+
+.whitePiece {
+    color: #fff;
+}
+
+.promotionPiece {
+    font-size: 3rem;
+}
+
+.invert {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+
+.promote {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px 20px;
+    justify-content: center;
+}
+
+button.promote {
+    min-width: 90px;
+    padding-left: 2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.notationContainer {
+    height: 70vh;
+    overflow-y: scroll;
+    margin-top: 1rem;
+}
+
+.notationGroup {
+    white-space: nowrap;
+    text-align: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.notationLabel {
+    width: 10%;
+    display: inline-block;
+}
+
+.notationButton {
+    margin-left: 1rem;
+    width: 40%;
+}
