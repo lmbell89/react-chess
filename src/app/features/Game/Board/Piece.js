@@ -27,6 +27,8 @@ export const Piece = props => {
     let css
     if (props.isPromotion) {
         css = styles.promotionPiece
+    } else if (props.isTaken) {
+        css = styles.takenPiece
     } else {
         css = isWhite ? styles.whitePiece : styles.blackPiece
     }

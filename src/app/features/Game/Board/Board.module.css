@@ -3,7 +3,6 @@
     border: 3px solid black;
     grid-template-columns: auto auto auto auto auto auto auto auto;
     max-width: 80vh;
-    margin-bottom: 25px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -57,6 +56,16 @@
 
 .promotionPiece {
     font-size: 3rem;
+}
+
+.takenPieceContainer {
+    text-align: center;
+    min-height: 1.5rem;
+}
+
+.takenPiece {
+    font-size: 1.2rem;
+    margin-left: 5px;
 }
 
 .invert {

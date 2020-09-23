@@ -5,10 +5,12 @@ export const Header = props => {
 
     if (props.gameEndReason) {
         text = props.gameEndReason
-    } else if (props.isUserCurrentPlayer) {
+    } else if (props.gameType !== 'local' &&
+        props.userColor[0] === props.turn)
+    {
         text = 'Your move'
     } else {
-        text = props.isWhiteToMove ? 'White to move' : 'Black to move'
+        text = props.turn === 'w' ? 'White to move' : 'Black to move'
     }
 
     return (

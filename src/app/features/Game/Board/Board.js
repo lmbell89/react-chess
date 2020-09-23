@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import styles from './Board.module.css'
 import { Square } from './Square'
 import { PromoteModal } from './PromoteModal'
+import { TakenPieces } from './TakenPieces'
 
 const getEmptySquares = () => {
     let squares = []
@@ -83,7 +84,7 @@ export const Board = props => {
     }
 
     const onSquareClick = (squareId, pieceSymbol, legalMoves) => {
-        if (props.isGameOver || !props.isCurrentPosition) return
+        if (!props.userCanMove || !props.isCurrentPosition) return
 
         const move = selectedSquareId + squareId
 
@@ -130,9 +131,21 @@ export const Board = props => {
     const invertedClass = props.isInverted ? styles.invert : null
 
     return (
-        <div className={styles.board + ' ' + invertedClass}>
-            {squareComponents}
-            {promoteModal}
+        <div className={invertedClass}>
+            <TakenPieces
+                color='white'
+                fen={props.fen}
+                isInverted={props.isInverted}
+            />
+            <div className={styles.board}>
+                {squareComponents}
+                {promoteModal}
+            </div>
+            <TakenPieces
+                color='black'
+                fen={props.fen}
+                isInverted={props.isInverted}
+            />
         </div>
     )
 }
