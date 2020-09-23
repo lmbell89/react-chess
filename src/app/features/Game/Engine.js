@@ -4,9 +4,12 @@ import Worker from 'worker-loader!stockfish/src/stockfish.asm.js'
 const HASH_SIZE = 32
 const DEPTH = 12
 
-const stockfish = new Worker()
+//const stockfish = new Worker()
+
+let stockfish
 
 export const initEngine = skillLevel => {
+    stockfish = new Worker()
     stockfish.postMessage(`setoption name hash value ${HASH_SIZE}`)
     stockfish.postMessage(`setoption name skill level value ${skillLevel}`)
 }

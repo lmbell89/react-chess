@@ -42,14 +42,6 @@ export const Game = props => {
         } else if (chess.in_draw() && !chess.in_threefold_repetition()) {
             setGameEndReason('Draw - 50 move rule')
         }
-
-
-        if (!gameEndReason &&
-            props.gameType === 'computer' &&
-            chess.turn() !== props.userColor[0]) {
-
-            getBestMove(chess.fen(), doMove)
-        }
     }
 
     const doDraw = () => {
@@ -65,6 +57,12 @@ export const Game = props => {
         }
     }, [])
 
+
+    if (!gameEndReason &&
+        props.gameType === 'computer' &&
+        chess.turn() !== props.userColor[0]) {
+        getBestMove(chess.fen(), doMove)
+    }
 
 
     let legalMoves = chess.moves({ verbose: true })
