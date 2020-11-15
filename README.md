@@ -1,68 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>React Chess</h1>
 
-## Available Scripts
+<p>
+A chess app written using React. The app requires a browser but not an internet connection. <br />
+Stockfish.js, which is a Javascript implementation of Stockfish 10, provides the engine. <br />
+Move validation is provided by Chess.js
+</p>
 
-In the project directory, you can run:
+<h2>Demo</h2>
 
-### `npm start`
+<p>A working demo is available at https://liambell.info/portfolio/chess/ </p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h2>Prerequisites</h2>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<p>This app was built using Create-React-App. Node must be installed to compile the source files.</p>
 
-### `npm test`
+<h2>Building / Deployment</h2>
+<p>Once downloaded, in the project root folder run the following commands: <br />
+	npm i
+	npm run build
+</p>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<p>This will create a build directory that contains a production build of the app. 
+You can then deploy the app as required, for example using a static server. <br />
+See https://create-react-app.dev/docs/deployment/ for more information about deploying.
+</p>
